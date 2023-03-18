@@ -1,0 +1,8 @@
+{
+  "slug": "trace-context-parser",
+  "title": "Trace Context Parser",
+  "description": "Inspect version-00 traceparent headers and derive synthetic child contexts.",
+  "category": "backend",
+  "demo_args": [],
+  "expected_exit": 0
+}
