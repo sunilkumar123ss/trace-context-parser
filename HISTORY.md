@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 3 of 20. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 4 of 20. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -15,7 +15,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 1 | 2023-03-18T18:12:30+05:30 | add repository metadata and Python ignore rules (present) |
 | 2 | 2023-07-26T09:31:43+05:30 | add module imports, constants, and scope documentation (present) |
 | 3 | 2023-11-21T17:11:37+05:30 | validate trace identifiers and derive child contexts (present) |
-| 4 | 2023-12-21T10:54:55+05:30 | parse the exact version-00 traceparent value (later stage) |
+| 4 | 2023-12-21T10:54:55+05:30 | parse the exact version-00 traceparent value (present) |
 | 5 | 2024-06-23T16:39:02+05:30 | extract case-insensitive headers and reject duplicates (later stage) |
 | 6 | 2024-07-23T17:26:07+05:30 | add the deterministic demonstration and command-line entry point (later stage) |
 | 7 | 2024-08-22T10:57:52+05:30 | test round trip and sampling (later stage) |

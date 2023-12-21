@@ -38,3 +38,13 @@ class TraceParent:
             raise ValueError("sampled must be bool or None")
         sampled = self.sampled if sampled is None else sampled
         return TraceParent(self.trace_id, new_parent_id, 1 if sampled else 0)
+
+
+def parse_traceparent(value):
+    if not isinstance(value, str):
+        raise ValueError("traceparent must be a string")
+    match = HEADER.fullmatch(value)
+    if match is None:
+        raise ValueError("expected exactly a version-00 traceparent with lowercase hexadecimal fields")
+    trace_id, parent_id, flags = match.groups()
+    return TraceParent(trace_id, parent_id, int(flags, 16))
