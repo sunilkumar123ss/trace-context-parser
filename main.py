@@ -48,3 +48,12 @@ def parse_traceparent(value):
         raise ValueError("expected exactly a version-00 traceparent with lowercase hexadecimal fields")
     trace_id, parent_id, flags = match.groups()
     return TraceParent(trace_id, parent_id, int(flags, 16))
+
+
+def extract_traceparent(headers):
+    values = [value for key, value in headers.items() if isinstance(key, str) and key.lower() == "traceparent"]
+    if not values:
+        return None
+    if len(values) != 1:
+        raise ValueError("multiple traceparent header fields are ambiguous")
+    return parse_traceparent(values[0])
