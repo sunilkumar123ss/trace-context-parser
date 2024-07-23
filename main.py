@@ -57,3 +57,21 @@ def extract_traceparent(headers):
     if len(values) != 1:
         raise ValueError("multiple traceparent header fields are ambiguous")
     return parse_traceparent(values[0])
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--header", default="00-11111111111111111111111111111111-2222222222222222-01",
+                        help="traceparent field value; default uses synthetic IDs")
+    args = parser.parse_args()
+    try:
+        context = parse_traceparent(args.header)
+    except ValueError as exc:
+        parser.error(str(exc))
+    child_id = "3333333333333333" if context.parent_id != "3333333333333333" else "4444444444444444"
+    print(json.dumps({"parsed": asdict(context), "sampled": context.sampled,
+                      "synthetic_child": context.child(child_id).to_header()}, indent=2))
+
+
+if __name__ == "__main__":
+    main()
