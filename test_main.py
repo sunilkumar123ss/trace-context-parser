@@ -12,6 +12,9 @@ class TraceContextTests(unittest.TestCase):
         self.assertTrue(parsed.sampled)
         self.assertFalse(parse_traceparent(VALID[:-2] + '00').sampled)
 
+    def test_sampling_masks_only_low_bit(self):
+        self.assertTrue(parse_traceparent(VALID[:-2] + '09').sampled)
+        self.assertFalse(parse_traceparent(VALID[:-2] + '08').sampled)
 
 
 
