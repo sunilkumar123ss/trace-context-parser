@@ -16,6 +16,9 @@ class TraceContextTests(unittest.TestCase):
         self.assertTrue(parse_traceparent(VALID[:-2] + '09').sampled)
         self.assertFalse(parse_traceparent(VALID[:-2] + '08').sampled)
 
+    def test_zero_identifiers_rejected(self):
+        for value in (VALID.replace('1' * 32, '0' * 32), VALID.replace('2' * 16, '0' * 16)):
+            with self.subTest(value=value), self.assertRaises(ValueError): parse_traceparent(value)
 
 
 
