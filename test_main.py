@@ -20,6 +20,9 @@ class TraceContextTests(unittest.TestCase):
         for value in (VALID.replace('1' * 32, '0' * 32), VALID.replace('2' * 16, '0' * 16)):
             with self.subTest(value=value), self.assertRaises(ValueError): parse_traceparent(value)
 
+    def test_uppercase_whitespace_and_extra_fields_rejected(self):
+        for value in (VALID.replace('1', 'A', 1), ' ' + VALID, VALID + '\n', VALID + '-extra', VALID[:-1]):
+            with self.subTest(value=value), self.assertRaises(ValueError): parse_traceparent(value)
 
 
 

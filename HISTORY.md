@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 9 of 20. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 10 of 20. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -21,7 +21,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 7 | 2024-08-22T10:57:52+05:30 | test round trip and sampling (present) |
 | 8 | 2024-09-09T10:31:23+05:30 | test sampling masks only low bit (present) |
 | 9 | 2024-09-16T16:22:32+05:30 | test zero identifiers rejected (present) |
-| 10 | 2024-10-24T09:31:36+05:30 | test uppercase whitespace and extra fields rejected (later stage) |
+| 10 | 2024-10-24T09:31:36+05:30 | test uppercase whitespace and extra fields rejected (present) |
 | 11 | 2024-11-07T18:22:58+05:30 | test unsupported versions rejected (later stage) |
 | 12 | 2025-05-24T16:24:52+05:30 | test case insensitive header name (later stage) |
 | 13 | 2025-07-04T10:07:23+05:30 | test duplicate case variant headers rejected (later stage) |
