@@ -24,6 +24,9 @@ class TraceContextTests(unittest.TestCase):
         for value in (VALID.replace('1', 'A', 1), ' ' + VALID, VALID + '\n', VALID + '-extra', VALID[:-1]):
             with self.subTest(value=value), self.assertRaises(ValueError): parse_traceparent(value)
 
+    def test_unsupported_versions_rejected(self):
+        for version in ('01', 'ff'):
+            with self.subTest(version=version), self.assertRaises(ValueError): parse_traceparent(version + VALID[2:])
 
 
 
