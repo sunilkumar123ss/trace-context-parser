@@ -28,6 +28,9 @@ class TraceContextTests(unittest.TestCase):
         for version in ('01', 'ff'):
             with self.subTest(version=version), self.assertRaises(ValueError): parse_traceparent(version + VALID[2:])
 
+    def test_case_insensitive_header_name(self):
+        self.assertEqual(extract_traceparent({'TraceParent': VALID}).to_header(), VALID)
+        self.assertIsNone(extract_traceparent({'accept': 'application/json'}))
 
 
 
