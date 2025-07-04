@@ -32,6 +32,8 @@ class TraceContextTests(unittest.TestCase):
         self.assertEqual(extract_traceparent({'TraceParent': VALID}).to_header(), VALID)
         self.assertIsNone(extract_traceparent({'accept': 'application/json'}))
 
+    def test_duplicate_case_variant_headers_rejected(self):
+        with self.assertRaises(ValueError): extract_traceparent({'TraceParent': VALID, 'traceparent': VALID})
 
 
 

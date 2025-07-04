@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 12 of 20. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 13 of 20. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -24,7 +24,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 10 | 2024-10-24T09:31:36+05:30 | test uppercase whitespace and extra fields rejected (present) |
 | 11 | 2024-11-07T18:22:58+05:30 | test unsupported versions rejected (present) |
 | 12 | 2025-05-24T16:24:52+05:30 | test case insensitive header name (present) |
-| 13 | 2025-07-04T10:07:23+05:30 | test duplicate case variant headers rejected (later stage) |
+| 13 | 2025-07-04T10:07:23+05:30 | test duplicate case variant headers rejected (present) |
 | 14 | 2025-07-27T18:42:49+05:30 | test child preserves trace changes parent and clears reserved flags (later stage) |
 | 15 | 2025-09-01T18:29:25+05:30 | test child id and sample type validation (later stage) |
 | 16 | 2025-11-26T14:03:56+05:30 | test direct constructor checks flag byte (later stage) |
