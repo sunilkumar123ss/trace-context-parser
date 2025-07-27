@@ -35,6 +35,13 @@ class TraceContextTests(unittest.TestCase):
     def test_duplicate_case_variant_headers_rejected(self):
         with self.assertRaises(ValueError): extract_traceparent({'TraceParent': VALID, 'traceparent': VALID})
 
+    def test_child_preserves_trace_changes_parent_and_clears_reserved_flags(self):
+        parent = parse_traceparent(VALID[:-2] + '09')
+        child = parent.child('3333333333333333', sampled=False)
+        self.assertEqual(child.trace_id, parent.trace_id)
+        self.assertNotEqual(child.parent_id, parent.parent_id)
+        self.assertEqual(child.flags, 0)
+        self.assertEqual(parent.flags, 9)
 
 
 
