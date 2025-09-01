@@ -43,6 +43,11 @@ class TraceContextTests(unittest.TestCase):
         self.assertEqual(child.flags, 0)
         self.assertEqual(parent.flags, 9)
 
+    def test_child_id_and_sample_type_validation(self):
+        parent = parse_traceparent(VALID)
+        for child_id in (parent.parent_id, '0' * 16, 'short'):
+            with self.subTest(child_id=child_id), self.assertRaises(ValueError): parent.child(child_id)
+        with self.assertRaises(ValueError): parent.child('3' * 16, sampled=1)
 
 
 
