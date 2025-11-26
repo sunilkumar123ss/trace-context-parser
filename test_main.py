@@ -49,6 +49,9 @@ class TraceContextTests(unittest.TestCase):
             with self.subTest(child_id=child_id), self.assertRaises(ValueError): parent.child(child_id)
         with self.assertRaises(ValueError): parent.child('3' * 16, sampled=1)
 
+    def test_direct_constructor_checks_flag_byte(self):
+        for flags in (-1, 256, True):
+            with self.subTest(flags=flags), self.assertRaises(ValueError): TraceParent('1' * 32, '2' * 16, flags)
 
 
 if __name__ == '__main__':

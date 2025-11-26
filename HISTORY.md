@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 15 of 20. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 16 of 20. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -27,7 +27,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 13 | 2025-07-04T10:07:23+05:30 | test duplicate case variant headers rejected (present) |
 | 14 | 2025-07-27T18:42:49+05:30 | test child preserves trace changes parent and clears reserved flags (present) |
 | 15 | 2025-09-01T18:29:25+05:30 | test child id and sample type validation (present) |
-| 16 | 2025-11-26T14:03:56+05:30 | test direct constructor checks flag byte (later stage) |
+| 16 | 2025-11-26T14:03:56+05:30 | test direct constructor checks flag byte (present) |
 | 17 | 2026-06-21T11:35:31+05:30 | add isolated tests, demo, and help verification (later stage) |
 | 18 | 2026-09-30T12:44:09+05:30 | add the hosted Python verification workflow (later stage) |
 | 19 | 2026-10-12T11:13:09+05:30 | record the completed local verification and its limits (later stage) |
